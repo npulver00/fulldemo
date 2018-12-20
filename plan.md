@@ -76,7 +76,7 @@
 #body-parser
 #massive
 #dotenv
-#express-section
+#express-session
 #http-proxy-middleware
 
 

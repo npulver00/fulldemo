@@ -46,6 +46,7 @@ module.exports={
                         user.picture,
                         user.sub   //github [12354654] or google 431654
                     ]).then(newUsers=>{
+                        console.log("new user")
                         req.session.user = newUsers[0]
                         res.redirect('/')
                     })
@@ -61,7 +62,14 @@ module.exports={
                     res.status(500).send("Something bad happened on the Server")
             }); 
     },
+        getUser: (req, res) => {
+            res.json({ user: req.session.user });
+        },
 
+        logout: (res, req)=>{
+            res.session.destroy();
+            res.send();
+        }
 
 
 
