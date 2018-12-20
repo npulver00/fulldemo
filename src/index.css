@@ -9,6 +9,7 @@ body {
   background-image: url("./image/snow.jpg");
   background-size: cover, stretch;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   
 }
 
