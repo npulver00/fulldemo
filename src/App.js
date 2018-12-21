@@ -37,10 +37,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.props.user ? this.props.user.name : ""}
-        <div className="auth0-button">
+      <div className="login">
+        <div className="navlogin">
+          <img className="user" src={this.props.user? this.props.user.picture: ""}/>
+          <div className="user"> {this.props.user ? this.props.user.name : ""} </div>
+        </div>
+        <div className="auth0-button-container">
           <button onClick={this.login}>Login</button>
         </div>
+       </div>
         <h1> ~Beautiful Quotes~ </h1>
 
         <Route path="/" component={List} />
