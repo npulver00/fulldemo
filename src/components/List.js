@@ -33,7 +33,7 @@ export default class List extends Component{
             <div>             
                 {quoteList 
                     ? quoteList.map(quote=>{
-                    return <div>{quote.phrase}</div>
+                    return <div className="box">{quote.phrase}</div>
                 })
              : <div>Waiting for Quotes</div>
             }
